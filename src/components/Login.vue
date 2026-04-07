@@ -73,7 +73,7 @@ const login = async () => {
         if (response.data.token) {
             localStorage.setItem("token", response.data.token)
             document.cookie = "token=" + response.data.token
-            // localStorage.setItem("role", response.data.role) 
+            localStorage.setItem("password", password.value)
             await router.push('/home')
         }
         else {
