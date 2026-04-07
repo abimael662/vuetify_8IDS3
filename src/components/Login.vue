@@ -72,6 +72,7 @@ const login = async () => {
         //if (response.data.access == 'Ok') {
         if (response.data.token) {
             localStorage.setItem("token", response.data.token)
+            document.cookie = "token=" + response.data.token
             // localStorage.setItem("role", response.data.role) 
             await router.push('/home')
         }
