@@ -55,6 +55,7 @@ const errorMessage = ref('')
 
 const login = async () => {
     try {
+        var load;
         loading.value = true
         errorMessage.value = ""
         if (!username.value || !password.value) {
